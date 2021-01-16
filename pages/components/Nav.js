@@ -1,11 +1,13 @@
-//tool imports
+import Link from 'next/link';
 import styled from 'styled-components';
 const Nav = () => {
   return (
     <Container>
-      <h1>This is the nav</h1>
+      <Logo>This is the nav</Logo>
       <LinksUl>
-        <Link>one</Link>
+        <Link>
+          <a>About me</a>
+        </Link>
         <Link>two</Link>
         <Link>three</Link>
         <Link>four</Link>
@@ -19,14 +21,16 @@ const Container = styled.div`
   display: flex;
   font-size: 2rem;
   justify-content: space-between;
+  padding: 2rem;
 `;
-const Logo = styled.div``;
+const Logo = styled.div`
+  margin: 2rem;
+`;
 const LinksUl = styled.ul`
   display: flex;
   justify-content: flex-end;
   flex: 1 1 2rem;
   list-style-type: none;
 `;
-const Link = styled.li``;
 
 export default Nav;

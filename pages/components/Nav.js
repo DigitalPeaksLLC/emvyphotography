@@ -1,16 +1,24 @@
+//tool imports
 import Link from 'next/link';
 import styled from 'styled-components';
+
 const Nav = () => {
   return (
     <Container>
       <Logo>This is the nav</Logo>
       <LinksUl>
-        <Link>
-          <a>About me</a>
+        <Link href="/gallery">
+          <a>Gallery</a>
         </Link>
-        <Link>two</Link>
-        <Link>three</Link>
-        <Link>four</Link>
+        <Link href="/services">
+          <a>Services</a>
+        </Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
       </LinksUl>
     </Container>
   );
@@ -32,5 +40,6 @@ const LinksUl = styled.ul`
   flex: 1 1 2rem;
   list-style-type: none;
 `;
+// const Link = styled.li``;
 
 export default Nav;
